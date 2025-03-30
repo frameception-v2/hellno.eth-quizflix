@@ -72,8 +72,8 @@ async function initializeFonts() {
 export default async function Image() {
   const options = await initializeFonts();
 
-  const BACKGROUND_GRADIENT_START = "#c026d3";
-  const BACKGROUND_GRADIENT_END = "#ef4444";
+  const BACKGROUND_GRADIENT_START = "#3b82f6";
+  const BACKGROUND_GRADIENT_END = "#8b5cf6";
   const BACKGROUND_GRADIENT_STYLE = {
     backgroundImage: `linear-gradient(to bottom, ${BACKGROUND_GRADIENT_START}, ${BACKGROUND_GRADIENT_END})`,
     color: "white",
@@ -93,8 +93,12 @@ Please refer to Satori’s documentation for a list of supported HTML and CSS fe
         tw="h-full w-full flex flex-col justify-center items-center relative"
         style={BACKGROUND_GRADIENT_STYLE}
       >
-        <h1 tw="text-9xl text-center font-semibold">{PROJECT_TITLE}</h1>
-        <h3 tw="text-4xl font-normal">{PROJECT_DESCRIPTION}</h3>
+        <h1 tw="text-8xl text-center font-semibold">{PROJECT_TITLE}</h1>
+        <h3 tw="text-4xl font-normal mt-8">{PROJECT_DESCRIPTION}</h3>
+        <div tw="mt-16 flex flex-col items-center">
+          <div tw="text-5xl font-bold mb-4">Test Your Knowledge!</div>
+          <div tw="text-3xl">2 Questions • Multiple Choice</div>
+        </div>
       </div>
     ),
     options
